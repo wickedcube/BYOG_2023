@@ -26,6 +26,7 @@ public class ChatBoxUI : MonoBehaviour
    private List<KeyCode> continueKeys;
    private Image activeSprite;
    private Coroutine chatRoutine;
+   private string currentChatString;
    
    private void Start()
    {
@@ -63,6 +64,12 @@ public class ChatBoxUI : MonoBehaviour
    private void ClearUnlockedSymbols()
    {
        GamePrefs.ClearChatHistory();
+   }
+   
+   [NaughtyAttributes.Button("Re")]
+   private void ReTranslate()
+   {
+       chatTextBox.text = FormatText(currentChatString);
    }
    
    public void StartChatting(string chatMapFileName)
@@ -161,6 +168,8 @@ public class ChatBoxUI : MonoBehaviour
                formatted = $"<font={secretFontAsset.name}>{ch}</font>";
            newString += formatted;
        }
+
+       currentChatString = newString;
        return newString;
    }
 
