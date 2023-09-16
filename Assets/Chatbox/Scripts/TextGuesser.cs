@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Text.RegularExpressions;
 using UnityEngine;
 
@@ -39,6 +40,7 @@ public class TextGuesser : MonoBehaviour
         this.onSubmit = onSubmit;
         IsOpen = true;
         this.gameObject.SetActive(true);
+        inputField.Select();
     }
 
     public void Close()
@@ -62,9 +64,15 @@ public class TextGuesser : MonoBehaviour
         {
             Debug.Log("FAIL");
             animator.SetTrigger("FAIL");
+            StartCoroutine(SelectAfter());
         }
     }
 
+    IEnumerator SelectAfter()
+    {
+        yield return new WaitForSeconds(0.2f);
+        inputField.Select();
+    }
     private string Validate(string input)
     {
         return input.Trim().ToLower();

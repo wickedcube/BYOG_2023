@@ -1,5 +1,4 @@
 [once]
-
 Arvind Kapoor [kieren/kieren-angry @ left] : .............
 Ishaan Varma [kieren/kieren-angry @ left] : This was a joyous event.
 Naina Shah [kieren/kieren-angry @ left] : Our school days brings back fond memories.
@@ -9,6 +8,5 @@ Raghav Mehta [kieren/kieren-angry @ left] : Uncertainties vex me; we had our dif
 Dr. Uma Krishnan [kieren/kieren-angry @ left] : Arvind's zest for challenges was unique; this loss is profound.
 
 [repeat]
-
 Goldsworth [kieren/kieren-angry @ right] : Very Good Sir.
 Goldsworth [kieren/kieren-angry @ right] : Very Good Sir.

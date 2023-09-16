@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using TextAsset = UnityEngine.TextAsset;
 
@@ -32,7 +33,10 @@ public class ChatBoxUI : MonoBehaviour
 
     private string CHAT_PATH = "ChatData";
     private string CHAR_IMG_PATH = "Characters";
+    [FormerlySerializedAs("helpButtons")] [SerializeField] private GameObject chatHelpButtons;
+    [SerializeField] private GameObject journalGameObject;
     [SerializeField] private CanvasGroup cg;
+    [SerializeField] private TMP_Text historyLabel;
     [SerializeField] private Animator chatBoxAnim;
     [SerializeField] private GameObject chatBoxArea;
     [SerializeField] private TMP_FontAsset secretFontAsset;
@@ -50,6 +54,8 @@ public class ChatBoxUI : MonoBehaviour
     private List<KeyCode> continueKeys;
     private Image activeSprite;
     private Coroutine chatRoutine;
+
+    private string currentSpeaker;
     private string currentChatInput;
 
     public Action OnSuccessfulTranslation;
@@ -102,6 +108,11 @@ public class ChatBoxUI : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.J) && !textGuesser.IsOpen && !IsOpen)
+        {
+            journalGameObject.SetActive(!journalGameObject.activeSelf);
+        }
+        
         if (!IsOpen)
             return;
         
@@ -115,17 +126,19 @@ public class ChatBoxUI : MonoBehaviour
             else
             {
                 cg.alpha = 0.95f;
+                journalGameObject.SetActive(false);
                 textGuesser.Open(currentChatInput, () =>
                 {
                     SaveStringChars(currentChatInput);
                     languageMode = LanguageMode.English;
                     chatTextBox.text = Translate(currentChatInput, languageMode);
+                    historyLabel.text += $"{currentSpeaker} : {chatTextBox.text}";
                     OnSuccessfulTranslation?.Invoke();
                     textGuesser.Close();
                 });
             }
         }
-        
+
         if (Input.GetKeyDown(KeyCode.T) && !textGuesser.IsOpen)
         {
             languageMode = (LanguageMode)(((int)languageMode + 1) % Enum.GetValues(typeof(LanguageMode)).Length);
@@ -148,6 +161,7 @@ public class ChatBoxUI : MonoBehaviour
     public void StartChatting(string chatMapFileName)
     {
         IsOpen = true;
+        chatHelpButtons.gameObject.SetActive(true);
         if(chatRoutine != null)
             StopCoroutine(chatRoutine);
    
@@ -175,8 +189,7 @@ public class ChatBoxUI : MonoBehaviour
     {
         if(activeSprite != null)
             activeSprite.gameObject.SetActive(false);
-   
-        
+
         IsOpen = false;
         languageMode = LanguageMode.Secret;
         if(textGuesser.IsOpen)
@@ -187,6 +200,7 @@ public class ChatBoxUI : MonoBehaviour
         {
             chatBoxArea.SetActive(false);
         }, 0.2f));
+        chatHelpButtons.gameObject.SetActive(false);
     }
 
     IEnumerator DelayedCall(Action action, float delay)
@@ -247,6 +261,8 @@ public class ChatBoxUI : MonoBehaviour
     private void DisplayData(ChatDialog data)
     {
         nameTextBox.text = data.Name;
+        currentSpeaker = data.Name;
+        
         chatTextBox.text = Translate(data.Text, languageMode);
         chatTextBox.ForceMeshUpdate(false,true);
         LoadCharacterImage(data.Img, data.ImgPos);

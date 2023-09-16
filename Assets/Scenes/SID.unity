@@ -1291,6 +1291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c81e0fe09296480da49298167a95408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  helpButtons: {fileID: 0}
   cg: {fileID: 0}
   chatBoxAnim: {fileID: 0}
   chatBoxArea: {fileID: 1478578614}
