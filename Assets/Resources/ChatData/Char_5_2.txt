@@ -1,0 +1,9 @@
+[once]
+
+Anil [kieren/kieren-angry @ left] : Arvind had commissioned a unique art piece from me for Naina. 
+Anil [kieren/kieren-angry @ left] : However, he abruptly canceled it.
+
+[repeat]
+
+Anil [kieren/kieren-angry @ left] : Arvind had commissioned a unique art piece from me for Naina. 
+Anil [kieren/kieren-angry @ left] : However, he abruptly canceled it.

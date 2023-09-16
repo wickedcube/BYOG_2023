@@ -1,0 +1,9 @@
+[once]
+
+Priya [kieren/kieren-angry @ left] : Uma has always been wary of Arvind. 
+Priya [kieren/kieren-angry @ left] : He often challenged her zoology research, which vexed her.
+
+[repeat]
+
+Priya [kieren/kieren-angry @ left] : Uma has always been wary of Arvind. 
+Priya [kieren/kieren-angry @ left] : He often challenged her zoology research, which vexed her.
