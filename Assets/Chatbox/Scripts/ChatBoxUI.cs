@@ -26,7 +26,7 @@ public class ChatBoxUI : MonoBehaviour
    private List<KeyCode> continueKeys;
    private Image activeSprite;
    private Coroutine chatRoutine;
-   private string currentChatString;
+   private string currentChatInput;
    
    private void Start()
    {
@@ -69,7 +69,7 @@ public class ChatBoxUI : MonoBehaviour
    [NaughtyAttributes.Button("Re")]
    private void ReTranslate()
    {
-       chatTextBox.text = FormatText(currentChatString);
+       chatTextBox.text = FormatText(currentChatInput);
    }
    
    public void StartChatting(string chatMapFileName)
@@ -158,6 +158,7 @@ public class ChatBoxUI : MonoBehaviour
 
    private string FormatText(string input)
    {
+       currentChatInput = input;
        string newString = "";
        foreach (var ch in input)
        {
@@ -168,8 +169,7 @@ public class ChatBoxUI : MonoBehaviour
                formatted = $"<font={secretFontAsset.name}>{ch}</font>";
            newString += formatted;
        }
-
-       currentChatString = newString;
+       
        return newString;
    }
 
