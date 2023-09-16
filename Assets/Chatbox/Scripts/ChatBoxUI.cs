@@ -33,7 +33,7 @@ public class ChatBoxUI : MonoBehaviour
     private string CHAT_PATH = "ChatData";
     private string CHAR_IMG_PATH = "Characters";
     [SerializeField] private CanvasGroup cg;
-    
+    [SerializeField] private Animator chatBoxAnim;
     [SerializeField] private GameObject chatBoxArea;
     [SerializeField] private TMP_FontAsset secretFontAsset;
     [SerializeField] private TMP_FontAsset discoveredFontAsset;
@@ -168,6 +168,7 @@ public class ChatBoxUI : MonoBehaviour
             Debug.Log("Loading Repeat Chat");
             InitialiseChat(chatData.RepeatDialogs, null);
         }
+        chatBoxAnim.SetBool("Open", IsOpen);
     }
 
     public void CloseChatBox()
@@ -175,14 +176,25 @@ public class ChatBoxUI : MonoBehaviour
         if(activeSprite != null)
             activeSprite.gameObject.SetActive(false);
    
-        chatBoxArea.SetActive(false);
+        
         IsOpen = false;
         languageMode = LanguageMode.Secret;
         if(textGuesser.IsOpen)
             textGuesser.Close();
         OnChatBoxClosed?.Invoke();
+        chatBoxAnim.SetBool("Open", IsOpen);
+        StartCoroutine(DelayedCall(() =>
+        {
+            chatBoxArea.SetActive(false);
+        }, 0.2f));
     }
 
+    IEnumerator DelayedCall(Action action, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        action?.Invoke();
+    }
+    
     private void InitialiseChat(List<ChatDialog> dialogList, Action onComplete)
     {    
         if(chatRoutine != null)
