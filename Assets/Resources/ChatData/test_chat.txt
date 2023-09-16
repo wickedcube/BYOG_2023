@@ -2,10 +2,10 @@
 
 Arvind Kapoor [kieren/kieren-angry @ left] : .............
 Ishaan Varma [kieren/kieren-angry @ left] : This was a joyous event.
-Naina Shah [kieren/kieren-angry @ left] : Our school days brings back fond memories.
-Priya Desai [kieren/kieren-angry @ left] : I never imagined this kind of end for our reunion.
+Naina Shah [kieren/kieren-angry @ left] : `Our school days brings back fond memories.`
+Priya Desai [kieren/kieren-angry @ left] : I never `imagined` this kind of end for our reunion.
 Anil Bhatia [kieren/kieren-angry @ left] : Life's canvas captures both light and dark.
-Raghav Mehta [kieren/kieren-angry @ left] : Uncertainties vex me; we had our differences.
+Raghav Mehta [kieren/kieren-angry @ left] : Uncertainties vex me; we had our `differences`.
 Dr. Uma Krishnan [kieren/kieren-angry @ left] : Arvind's zest for challenges was unique; this loss is profound.
 
 [repeat]
