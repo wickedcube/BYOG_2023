@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,6 +15,19 @@ public class ChatBoxUI : MonoBehaviour
         English
     }
 
+    private static ChatBoxUI instance;
+
+    public static ChatBoxUI Instance
+    {
+        get
+        {
+            if (instance == null)
+                instance = FindObjectOfType<ChatBoxUI>();
+
+            return instance;
+        }
+    }
+    
     public bool IsOpen { get; private set; }
 
     private string CHAT_PATH = "ChatData";
@@ -25,19 +39,19 @@ public class ChatBoxUI : MonoBehaviour
     [SerializeField] private TMP_FontAsset discoveredFontAsset;
     [SerializeField] private TMP_Text chatTextBox;
     [SerializeField] private TMP_Text nameTextBox;
+    [SerializeField] private TextGuesser textGuesser;
     [SerializeField] private string continueCode;
     [SerializeField] private string HiddenSymbol = "[]";
-    
     [SerializeField] private List<Image> availbleSprites;
     [SerializeField] private List<char> basicUnlockedSymbols;
     [SerializeField] private List<char> unlockedSymbols;
-
+    
     private LanguageMode languageMode = LanguageMode.Secret;
     private List<KeyCode> continueKeys;
     private Image activeSprite;
     private Coroutine chatRoutine;
     private string currentChatInput;
-
+    
     [NaughtyAttributes.Button("Test")]
     private void TestChat()
     { 
@@ -53,7 +67,7 @@ public class ChatBoxUI : MonoBehaviour
     [NaughtyAttributes.Button("Clear Unlocked Symbols")]
     private void ClearUnlockedSymbols()
     {
-        GamePrefs.ClearChatHistory();
+        GamePrefs.ClearUnlockedSymbols();
     }
 
     [NaughtyAttributes.Button("Re")]
@@ -64,6 +78,7 @@ public class ChatBoxUI : MonoBehaviour
 
     private void Start()
     {
+        textGuesser = GetComponentInChildren<TextGuesser>(true);
         unlockedSymbols = GamePrefs.GetUnlockedSymbols();
         if (unlockedSymbols.Count <= 0)
         {
@@ -86,13 +101,43 @@ public class ChatBoxUI : MonoBehaviour
         if (!IsOpen)
             return;
         
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            if (textGuesser.IsOpen)
+            {
+                cg.alpha = 1f;
+                textGuesser.Close();
+            }
+            else
+            {
+                cg.alpha = 0.95f;
+                textGuesser.Open(currentChatInput, () =>
+                {
+                    SaveStringChars(currentChatInput);
+                    chatTextBox.text = Translate(currentChatInput, LanguageMode.English);
+                });
+            }
+        }
+        
+        if (Input.GetKeyDown(KeyCode.T) && !textGuesser.IsOpen)
         {
             languageMode = (LanguageMode)(((int)languageMode + 1) % Enum.GetValues(typeof(LanguageMode)).Length);
             chatTextBox.text = Translate(currentChatInput, languageMode);
         }
+        
     }
 
+    private void SaveStringChars(string text)
+    {
+        List<char> unique = text.Distinct().ToList();
+        foreach (var ch in unique)
+        {
+            GamePrefs.SaveToUnlockedSymbol(ch);
+        }
+        
+        unlockedSymbols = GamePrefs.GetUnlockedSymbols();
+    }
+    
     public void StartChatting(string chatMapFileName)
     {
         IsOpen = true;
@@ -161,6 +206,9 @@ public class ChatBoxUI : MonoBehaviour
 
     private bool IsContinuePressed()
     {
+        if(textGuesser.IsOpen)
+            return false;
+        
         foreach (var keyCode in continueKeys)
         {
             if (Input.GetKeyDown(keyCode))
@@ -197,7 +245,6 @@ public class ChatBoxUI : MonoBehaviour
             {
                 newString += languageMode == LanguageMode.English?" ": "<nbsp><nbsp>";
                 continue;
-                
             }
 
             if (ch == '`' && !skipping)

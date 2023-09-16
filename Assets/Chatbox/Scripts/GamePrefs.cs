@@ -10,12 +10,14 @@ public class GamePrefs
    public static List<char> GetUnlockedSymbols()
    {
       List<char> unlockedSymbols = new List<char>();
-      if (PlayerPrefs.HasKey(KEY_CHAT_HISTORY))
+      if (PlayerPrefs.HasKey(KEY_UNLOCKED_SYMBOLS))
       {
          var list = PlayerPrefs.GetString(KEY_UNLOCKED_SYMBOLS).Split(",").ToList();
          foreach (var itm in list)
          {
             if(itm.Length <= 0)
+               continue;
+            if(itm == " ")
                continue;
             unlockedSymbols.Add(itm[0]);
          }
