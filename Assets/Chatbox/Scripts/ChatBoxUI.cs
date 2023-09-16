@@ -114,7 +114,9 @@ public class ChatBoxUI : MonoBehaviour
                 textGuesser.Open(currentChatInput, () =>
                 {
                     SaveStringChars(currentChatInput);
-                    chatTextBox.text = Translate(currentChatInput, LanguageMode.English);
+                    textGuesser.Close();
+                    languageMode = LanguageMode.English;
+                    chatTextBox.text = Translate(currentChatInput, languageMode);
                 });
             }
         }
@@ -188,6 +190,11 @@ public class ChatBoxUI : MonoBehaviour
         DisplayData(chatDialogs[0]);
         while (true)
         {
+            if (textGuesser.IsOpen)
+            {
+                yield return new WaitForSeconds(1);
+            }
+            
             if (IsContinuePressed())
             {
                 indx+=1;
@@ -206,9 +213,6 @@ public class ChatBoxUI : MonoBehaviour
 
     private bool IsContinuePressed()
     {
-        if(textGuesser.IsOpen)
-            return false;
-        
         foreach (var keyCode in continueKeys)
         {
             if (Input.GetKeyDown(keyCode))
@@ -265,7 +269,7 @@ public class ChatBoxUI : MonoBehaviour
             }
             
             string formatted;
-            if (this.languageMode == LanguageMode.English)
+            if (languageMode == LanguageMode.English)
             {
                 if (unlockedSymbols.Contains(char.ToLower(ch)))
                     formatted = $"<font={discoveredFontAsset.name}>{ch}</font>";

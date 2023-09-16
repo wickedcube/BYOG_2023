@@ -9,11 +9,13 @@ public class TextGuesser : MonoBehaviour
     [SerializeField] private GameObject acceptBttn;
     private Action onSubmit;
     private string checkString;
-
+    private Animator animator;
+    
     public bool IsOpen { get; private set; }
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         inputField.onSubmit.AddListener((str) =>  Match());
     }
 
@@ -49,11 +51,9 @@ public class TextGuesser : MonoBehaviour
     
     private void Match()
     {
-        Debug.Log("Matching...");
-        checkString = Validate(checkString);
+        var chk = Validate(checkString);
         var str = Validate(inputField.text);
-        Debug.Log($"{str} -- {checkString}");
-        if (str == checkString)
+        if (str == chk)
         {
             Debug.Log("SUCC");
             onSubmit?.Invoke();
@@ -61,18 +61,12 @@ public class TextGuesser : MonoBehaviour
         else
         {
             Debug.Log("FAIL");
-            //Shake();
+            animator.SetTrigger("FAIL");
         }
     }
 
     private string Validate(string input)
     {
-        var str = input.Replace(",", "");
-        str = str.Replace(".", "");
-        str = str.Replace(";", "");
-        str = str.Replace("?", "");
-        str = str.Replace("?", "\"");
-        str = str.Trim();
-        return str.ToLower();
+        return input.Trim().ToLower();
     }
 }
