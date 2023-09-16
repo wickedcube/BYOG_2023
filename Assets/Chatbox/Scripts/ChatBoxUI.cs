@@ -51,6 +51,10 @@ public class ChatBoxUI : MonoBehaviour
     private Image activeSprite;
     private Coroutine chatRoutine;
     private string currentChatInput;
+
+    public Action OnSuccessfulTranslation;
+    public Action OnChatBoxClosed;
+    
     
     [NaughtyAttributes.Button("Test")]
     private void TestChat()
@@ -114,9 +118,10 @@ public class ChatBoxUI : MonoBehaviour
                 textGuesser.Open(currentChatInput, () =>
                 {
                     SaveStringChars(currentChatInput);
-                    textGuesser.Close();
                     languageMode = LanguageMode.English;
                     chatTextBox.text = Translate(currentChatInput, languageMode);
+                    OnSuccessfulTranslation?.Invoke();
+                    textGuesser.Close();
                 });
             }
         }
@@ -173,6 +178,9 @@ public class ChatBoxUI : MonoBehaviour
         chatBoxArea.SetActive(false);
         IsOpen = false;
         languageMode = LanguageMode.Secret;
+        if(textGuesser.IsOpen)
+            textGuesser.Close();
+        OnChatBoxClosed?.Invoke();
     }
 
     private void InitialiseChat(List<ChatDialog> dialogList, Action onComplete)
