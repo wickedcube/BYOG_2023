@@ -7,7 +7,7 @@ namespace DefaultNamespace
     {
         private void Update()
         {
-            transform.LookAt(Camera.main.transform);
+            transform.LookAt(RoomTransit.Instance.activeCamera.transform);
         }
     }
 }
