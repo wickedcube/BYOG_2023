@@ -42,7 +42,7 @@ public class ChatData
         var repeatStartIndx = chatDataText.IndexOf(SYMB_REPEEAT);
         var repeatEndIndx = repeatStartIndx + SYMB_REPEEAT.Length + 1;
         var onceData = chatDataText.Substring(onceStartIndx + SYMB_ONCE.Length + 1, repeatStartIndx - SYMB_REPEEAT.Length).Trim();
-        var repeatData = chatDataText.Substring(repeatEndIndx, chatDataText.Length - repeatEndIndx - 1).Trim();
+        var repeatData = chatDataText.Substring(repeatEndIndx, chatDataText.Length - repeatEndIndx).Trim();
         
         return new ChatData()
         {
