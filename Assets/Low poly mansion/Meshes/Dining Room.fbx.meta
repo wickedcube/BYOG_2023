@@ -1,0 +1,250 @@
+fileFormatVersion: 2
+guid: 2f2a7a6a4ed93434fb2b407b317e7feb
+timeCreated: 1551350122
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Chair
+    100002: Cube.000
+    100004: Cube.001
+    100006: Cube.002
+    100008: Cube.003
+    100010: Cube.004
+    100012: Cube.005
+    100014: Cube.006
+    100016: Cube.007
+    100018: Cube.008
+    100020: Cube.009
+    100022: Cube.010
+    100024: Cube.011
+    100026: Cube.012
+    100028: Cube.013
+    100030: Cube.014
+    100032: Cube.017
+    100034: Cube.022
+    100036: Cube.024
+    100038: Cube.026
+    100040: Cylinder
+    100042: Cylinder.001
+    100044: Cylinder.002
+    100046: Cylinder.003
+    100048: Cylinder.005
+    100050: Cylinder.006
+    100052: Cylinder.013
+    100054: //RootNode
+    100056: Flores
+    100058: Icosphere
+    100060: Icosphere.002
+    100062: Sun.001
+    400000: Chair
+    400002: Cube.000
+    400004: Cube.001
+    400006: Cube.002
+    400008: Cube.003
+    400010: Cube.004
+    400012: Cube.005
+    400014: Cube.006
+    400016: Cube.007
+    400018: Cube.008
+    400020: Cube.009
+    400022: Cube.010
+    400024: Cube.011
+    400026: Cube.012
+    400028: Cube.013
+    400030: Cube.014
+    400032: Cube.017
+    400034: Cube.022
+    400036: Cube.024
+    400038: Cube.026
+    400040: Cylinder
+    400042: Cylinder.001
+    400044: Cylinder.002
+    400046: Cylinder.003
+    400048: Cylinder.005
+    400050: Cylinder.006
+    400052: Cylinder.013
+    400054: //RootNode
+    400056: Flores
+    400058: Icosphere
+    400060: Icosphere.002
+    400062: Sun.001
+    2300000: Chair
+    2300002: Cube.000
+    2300004: Cube.001
+    2300006: Cube.002
+    2300008: Cube.003
+    2300010: Cube.004
+    2300012: Cube.005
+    2300014: Cube.006
+    2300016: Cube.007
+    2300018: Cube.008
+    2300020: Cube.009
+    2300022: Cube.010
+    2300024: Cube.011
+    2300026: Cube.012
+    2300028: Cube.013
+    2300030: Cube.014
+    2300032: Cube.017
+    2300034: Cube.022
+    2300036: Cube.024
+    2300038: Cube.026
+    2300040: Cylinder
+    2300042: Cylinder.001
+    2300044: Cylinder.002
+    2300046: Cylinder.003
+    2300048: Cylinder.005
+    2300050: Cylinder.006
+    2300052: Cylinder.013
+    2300054: Flores
+    2300056: Icosphere
+    2300058: Icosphere.002
+    3300000: Chair
+    3300002: Cube.000
+    3300004: Cube.001
+    3300006: Cube.002
+    3300008: Cube.003
+    3300010: Cube.004
+    3300012: Cube.005
+    3300014: Cube.006
+    3300016: Cube.007
+    3300018: Cube.008
+    3300020: Cube.009
+    3300022: Cube.010
+    3300024: Cube.011
+    3300026: Cube.012
+    3300028: Cube.013
+    3300030: Cube.014
+    3300032: Cube.017
+    3300034: Cube.022
+    3300036: Cube.024
+    3300038: Cube.026
+    3300040: Cylinder
+    3300042: Cylinder.001
+    3300044: Cylinder.002
+    3300046: Cylinder.003
+    3300048: Cylinder.005
+    3300050: Cylinder.006
+    3300052: Cylinder.013
+    3300054: Flores
+    3300056: Icosphere
+    3300058: Icosphere.002
+    4300000: Cube.017
+    4300002: Cube.014
+    4300004: Cube.001
+    4300006: Cube.013
+    4300008: Cube.006
+    4300010: Cylinder.005
+    4300012: Cylinder.006
+    4300014: Cube.005
+    4300016: Cube.004
+    4300018: Cube.011
+    4300020: Cube.010
+    4300022: Cube.003
+    4300024: Cube.002
+    4300026: Cube.000
+    4300028: Icosphere.002
+    4300030: Cube.008
+    4300032: Cube.007
+    4300034: Cylinder.002
+    4300036: Cylinder.003
+    4300038: Cube.012
+    4300040: Cube.024
+    4300042: Icosphere
+    4300044: Cube.026
+    4300046: Cube.009
+    4300048: Chair
+    4300050: Cube.022
+    4300052: Cylinder.001
+    4300054: Flores
+    4300056: Cylinder.013
+    4300058: Cylinder
+    10800000: Sun.001
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Portrait
+    second: {fileID: 2100000, guid: e7365def167765a4a9d75ea778e4493d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Texture Dinner
+    second: {fileID: 2100000, guid: 7d8633bfc57bb8f418c1ddb42168a7f0, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

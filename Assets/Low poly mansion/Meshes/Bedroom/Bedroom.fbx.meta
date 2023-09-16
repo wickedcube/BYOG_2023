@@ -1,0 +1,178 @@
+fileFormatVersion: 2
+guid: 0da3827aeaeb9cc4b8ccb29fa962651a
+timeCreated: 1551360230
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Camera
+    100004: Cube
+    100006: Cube.000
+    100008: Cube.023
+    100010: Cube.626
+    100012: Cube.627
+    100014: Cube.628
+    100016: Cube.629
+    100018: Cube.630
+    100020: Cube.631
+    100022: Cube.632
+    100024: Cube.633
+    100026: Cube.634
+    100028: Cube.636
+    100030: Cube.637
+    100032: Cube.657
+    100034: Light
+    400000: //RootNode
+    400002: Camera
+    400004: Cube
+    400006: Cube.000
+    400008: Cube.023
+    400010: Cube.626
+    400012: Cube.627
+    400014: Cube.628
+    400016: Cube.629
+    400018: Cube.630
+    400020: Cube.631
+    400022: Cube.632
+    400024: Cube.633
+    400026: Cube.634
+    400028: Cube.636
+    400030: Cube.637
+    400032: Cube.657
+    400034: Light
+    2000000: Camera
+    2300000: Cube
+    2300002: Cube.000
+    2300004: Cube.023
+    2300006: Cube.626
+    2300008: Cube.627
+    2300010: Cube.628
+    2300012: Cube.629
+    2300014: Cube.630
+    2300016: Cube.631
+    2300018: Cube.632
+    2300020: Cube.633
+    2300022: Cube.634
+    2300024: Cube.636
+    2300026: Cube.637
+    2300028: Cube.657
+    3300000: Cube
+    3300002: Cube.000
+    3300004: Cube.023
+    3300006: Cube.626
+    3300008: Cube.627
+    3300010: Cube.628
+    3300012: Cube.629
+    3300014: Cube.630
+    3300016: Cube.631
+    3300018: Cube.632
+    3300020: Cube.633
+    3300022: Cube.634
+    3300024: Cube.636
+    3300026: Cube.637
+    3300028: Cube.657
+    4300000: Cube.000
+    4300002: Cube.657
+    4300004: Cube.637
+    4300006: Cube.636
+    4300008: Cube.634
+    4300010: Cube.633
+    4300012: Cube.632
+    4300014: Cube.631
+    4300016: Cube.630
+    4300018: Cube.629
+    4300020: Cube.628
+    4300022: Cube.627
+    4300024: Cube.626
+    4300026: Cube.023
+    4300028: Cube
+    10800000: Light
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bedroom
+    second: {fileID: 2100000, guid: 296ac92fbd115da4b935506b117b0b98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: b10bdbfeb67ee2344845dd13f9692164, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
