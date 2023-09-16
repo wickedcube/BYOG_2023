@@ -45,7 +45,7 @@ namespace DefaultNamespace
         {
             foreach (var roomToNameMapping in roomToNameMappings)
             {
-                roomToNameMapping.roomInScene.GetComponent<RoomBehaviour>().Init(this);
+                roomToNameMapping.roomInScene.GetComponent<RoomBehaviour>().Init(this, roomToNameMapping.roomTypeName);
                 roomToNameMapping.roomInScene.SetActive(false);
 
                 if (defaultRoom == roomToNameMapping.roomTypeName)
@@ -69,15 +69,17 @@ namespace DefaultNamespace
             var bla = roomToNameMappings.FirstOrDefault(x => x.roomTypeName == xyz);
             if (bla != null)
             {
+                RoomType lastRoom = RoomType.None;
                 if (activeRoom != null)
                 {
+                    lastRoom = activeRoom.roomTypeName;
                     activeRoom.GetComponent<RoomBehaviour>().Deactivate();
                 }
 
                 var roomB = bla.roomInScene.GetComponent<RoomBehaviour>();
                 activeRoom = roomB.Activate();
                 activeCamera = activeRoom.roomCamera;
-                activePlayer.TeleportPlayer(activeRoom.spawnPoint.position);
+                activePlayer.TeleportPlayer(activeRoom.GetSpawnPoint(lastRoom).position);
             }
             else
             {
