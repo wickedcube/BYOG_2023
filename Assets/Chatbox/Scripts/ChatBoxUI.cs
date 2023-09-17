@@ -208,6 +208,7 @@ public class ChatBoxUI : MonoBehaviour
             chatBoxArea.SetActive(false);
         }, 0.2f));
         chatHelpButtons.gameObject.SetActive(false);
+        chatOgOnTranslateBox.gameObject.SetActive(false);
     }
 
     IEnumerator DelayedCall(Action action, float delay)
@@ -291,7 +292,7 @@ public class ChatBoxUI : MonoBehaviour
         {
             if (ch == ' ')
             {
-                newString += languageMode == LanguageMode.English?" ": "<nbsp><nbsp>";
+                newString += languageMode == LanguageMode.English?" ": "<nbsp>";
                 continue;
             }
 
@@ -323,7 +324,7 @@ public class ChatBoxUI : MonoBehaviour
             }
             else
             {
-                formatted = $"<font={secretFontAsset.name}>{ch}</font>";
+                formatted = $"<mspace=15px> <font={secretFontAsset.name}>{ch}</font>";
             }
 
             newString += formatted;

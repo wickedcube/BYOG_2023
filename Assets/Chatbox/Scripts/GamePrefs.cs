@@ -36,6 +36,21 @@ public class GamePrefs
       PlayerPrefs.Save();
    }
    
+   public static void SaveToUnlockedSymbol(string s)
+   {
+      foreach (var c in s)
+      {
+         SaveToUnlockedSymbol(c);
+      }
+      
+      NotifyUnlock(s);
+   }
+
+   public static void NotifyUnlock(string unlockedChars)
+   {
+      
+   }
+
    public static bool IsNewChat(string chatMapFileName)
    {
       List<string> chatHistory;

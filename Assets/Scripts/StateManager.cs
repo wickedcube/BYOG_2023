@@ -10,7 +10,7 @@ public enum Guest
     Uma,
     Naina,
     Anil,
-    Ishaan
+    Ishaan,
 }
 
 public class StateManager : MonoBehaviour
@@ -44,6 +44,7 @@ public class StateManager : MonoBehaviour
 
     private void Start()
     {
+        PlayerPrefs.DeleteAll();
         Instance = this;
         ChatBoxUI.Instance.OnSuccessfulTranslation += () =>
         {
@@ -60,6 +61,13 @@ public class StateManager : MonoBehaviour
             if (TriggerAnotherCharacterNext.ContainsKey((lastInteractedGuest, CharNameToStateDict[lastInteractedGuest])))
             {
                 MoveCharToNextState(TriggerAnotherCharacterNext[(lastInteractedGuest, CharNameToStateDict[lastInteractedGuest])]);    
+            }
+
+            if (lastInteractedGuest == Guest.Arvind && 
+                CharNameToStateDict[lastInteractedGuest] == 1 &&
+                !_translatedPhase1Guests.Contains(Guest.Arvind))
+            {
+                GamePrefs.SaveToUnlockedSymbol("AMS");    
             }
 
             if (_translatedPhase1Guests.Count == Enum.GetNames(typeof(Guest)).Length - 2)
@@ -100,11 +108,6 @@ public class StateManager : MonoBehaviour
         }
 
         Enum.TryParse(gameObjectName, out Guest parsedGuest);
-        if (parsedGuest == Guest.Arvind)
-        {
-            Debug.LogError("Arvind is a dead man");
-        }
-        
         _lastInteractedGuestN = parsedGuest;
     }
     

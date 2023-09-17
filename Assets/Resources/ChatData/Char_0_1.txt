@@ -1,8 +1,11 @@
 [once]
 
-Arvind [kieren/kieren-angry @ left] : I got rekt
+Detective [kieren/kieren-angry @ left] : `Looks like a journal, would help with the case`
+Detective [kieren/kieren-angry @ left] : `Log no : 1589`
+Detective [kieren/kieren-angry @ left] : `Blah blah blah`
+Detective [kieren/kieren-angry @ left] : `A`  A  `M`  M  `S`  S
 
 
 [repeat]
 
-Arvind [kieren/kieren-angry @ left] : I got rekt
+Detective [kieren/kieren-angry @ left] : `Nothing to see here`
