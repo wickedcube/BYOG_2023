@@ -41,9 +41,9 @@ namespace DefaultNamespace
 
             timeInCollider += Time.deltaTime;
 
-            if (timeInCollider >= RoomTransit.Instance.waitBeforeChangingRoomsOnPlayerHold )
+            if (timeInCollider >= RoomTransit.Instance.b )
             {
-                if ((Time.time - lastInputChangedTimestamp > 2f))
+                if ((Time.time - lastInputChangedTimestamp > 1f))
                 {
                     RoomTransit.Instance.TransportPlayerToRoom(exitRoomType);
                 }

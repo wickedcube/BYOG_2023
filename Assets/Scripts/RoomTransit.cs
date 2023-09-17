@@ -24,8 +24,8 @@ namespace DefaultNamespace
         public GameObject roomInScene;
     }
     public class RoomTransit : MonoBehaviour
-    {
-        public int waitBeforeChangingRoomsOnPlayerHold = 2;
+    { 
+        public float b = .7f;
         public static RoomTransit Instance;
 
         public GameObject playerPrefab;

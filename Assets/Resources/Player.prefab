@@ -130,7 +130,7 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2
+  m_Height: 2.5
   m_Radius: 0.2
   m_SlopeLimit: 45
   m_StepOffset: 0.2
@@ -149,8 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6669803137704d219a754fc6e18bb119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  gravity: 5
+  speed: 7
+  gravity: 3
   controller: {fileID: 0}
 --- !u!54 &4459992038052795332
 Rigidbody:
