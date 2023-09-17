@@ -308,7 +308,8 @@ public class ChatBoxUI : MonoBehaviour
             string formatted;
             if (languageMode == LanguageMode.English)
             {
-                if (unlockedSymbols.Contains(char.ToLower(ch)))
+                var lowerch = char.ToLower(ch);
+                if (unlockedSymbols.Contains(lowerch) || basicUnlockedSymbols.Contains(lowerch))
                     formatted = $"<font={discoveredFontAsset.name}>{ch}</font>";
                 else
                     formatted = HiddenSymbol;
