@@ -1,10 +1,18 @@
 [once]
 
-Detective [kieren/kieren-angry @ left] : `Looks like a journal, would help with the case`
-Detective [kieren/kieren-angry @ left] : `Blah blah blah`
-Detective [kieren/kieren-angry @ left] : `D` D `R` R `E` E `A` A `M` M
+Detective [kieren/kieren-angry @ left] : `An old language decryptor, just what i needed to understand these people`
+Detective [kieren/kieren-angry @ left] : `Its only a small part, but that should be enough to start the investigation`
+Detective [kieren/kieren-angry @ left] : `D  ---->` D
+Detective [kieren/kieren-angry @ left] : `R  ---->` R
+Detective [kieren/kieren-angry @ left] : `E  ---->` E
+Detective [kieren/kieren-angry @ left] : `A  ---->` A
+Detective [kieren/kieren-angry @ left] : `M  ---->` M
 
 
 [repeat]
 
-Detective [kieren/kieren-angry @ left] : `Nothing to see here`
+Detective [kieren/kieren-angry @ left] : `D  ---->` D
+Detective [kieren/kieren-angry @ left] : `R  ---->` R
+Detective [kieren/kieren-angry @ left] : `E  ---->` E
+Detective [kieren/kieren-angry @ left] : `A  ---->` A
+Detective [kieren/kieren-angry @ left] : `M  ---->` M

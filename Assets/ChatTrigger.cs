@@ -10,6 +10,7 @@ namespace DefaultNamespace
         {
             if (other.gameObject.GetComponent<Player>())
             {
+                other.gameObject.GetComponent<Player>().interactETransform.gameObject.SetActive(true);
                 StateManager.Instance.SetCurrentInteractingChar(gameObject.name);
             }
         }
@@ -18,6 +19,7 @@ namespace DefaultNamespace
         {
             if (other.gameObject.GetComponent<Player>())
             {
+                other.gameObject.GetComponent<Player>().interactETransform.gameObject.SetActive(false);
                 StateManager.Instance.SetCurrentInteractingChar("", true);
             }
         }

@@ -5,6 +5,7 @@ namespace DefaultNamespace
 {
     public class Player : MonoBehaviour
     {
+        public Transform interactETransform;
         public Action PlayerChangedInput;
         
         public float speed = 12;

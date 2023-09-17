@@ -29,9 +29,8 @@ public class StateManager : MonoBehaviour
     private Guest? _lastInteractedGuestN;
     private HashSet<Guest> _translatedPhase1Guests = new();
     private HashSet<Guest> _translatedPhase2Guests = new();
-    public  List<Transform> phase1Guests;
-    public List<Transform> phase2Guests;
-    public List<Transform> phase3Guests;
+    public Transform phase1Guests;
+    public Transform phase2Guests;
     public Transform solver;
 
     public static StateManager Instance;
@@ -64,16 +63,21 @@ public class StateManager : MonoBehaviour
 
             if (_translatedPhase1Guests.Count == Enum.GetNames(typeof(Guest)).Length - 2)
             {
+                phase1Guests.gameObject.SetActive(false);
+                
                 MoveCharToNextState(Guest.Priya);
                 MoveCharToNextState(Guest.Raghav);
                 MoveCharToNextState(Guest.Uma);
                 MoveCharToNextState(Guest.Naina);
                 MoveCharToNextState(Guest.Anil);
                 MoveCharToNextState(Guest.Ishaan);
+                
+                phase2Guests.gameObject.SetActive(true);
             }
 
             if (_translatedPhase2Guests.Count == Enum.GetNames(typeof(Guest)).Length - 2)
             {
+                phase2Guests.gameObject.SetActive(false);
                 solver.gameObject.SetActive(true);
             }
         };
