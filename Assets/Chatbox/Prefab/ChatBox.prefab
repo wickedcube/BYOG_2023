@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 116.748314, y: -17.11}
-  m_SizeDelta: {x: 105.4984, y: 34.22}
+  m_AnchoredPosition: {x: 97.99751, y: -17.11}
+  m_SizeDelta: {x: 143, y: 34.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8640699022677487092
 CanvasRenderer:
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_text: Translate
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f875da48339b67f479512772101d3aba, type: 2}
-  m_sharedMaterial: {fileID: 8352227799432077483, guid: a081233cec5794765952618871ac8b73,
+  m_sharedMaterial: {fileID: 4100901348875126467, guid: f875da48339b67f479512772101d3aba,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.2
+  m_fontSize: 19.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &168626438187660248
@@ -1219,20 +1219,21 @@ MonoBehaviour:
   chatBoxAnim: {fileID: 5032335344484724170}
   chatBoxArea: {fileID: 2241451253889268433}
   secretFontAsset: {fileID: 11400000, guid: 6c37f99aadb634e7d888c251e0efa02c, type: 2}
-  discoveredFontAsset: {fileID: 11400000, guid: a081233cec5794765952618871ac8b73,
+  discoveredFontAsset: {fileID: 11400000, guid: f875da48339b67f479512772101d3aba,
     type: 2}
   chatTextBox: {fileID: 6633424477135140066}
   chatOgOnTranslateBox: {fileID: 6101087252879469718}
   nameTextBox: {fileID: 1977895809023977418}
   textGuesser: {fileID: 3827375402083380517}
   continueCode: Return,Space
-  HiddenSymbol: '_ '
+  HiddenSymbol: _
   availbleSprites:
   - {fileID: 868394996549391050}
   - {fileID: 8372099071310164320}
   - {fileID: 9167102883533172687}
   basicUnlockedSymbols: 2e002c003b003f0021002c002700
   unlockedSymbols: 
+  readFilesNames: []
 --- !u!1 &2241451253889268433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,7 +1769,7 @@ MonoBehaviour:
   m_text: Guess
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f875da48339b67f479512772101d3aba, type: 2}
-  m_sharedMaterial: {fileID: 8352227799432077483, guid: a081233cec5794765952618871ac8b73,
+  m_sharedMaterial: {fileID: 4100901348875126467, guid: f875da48339b67f479512772101d3aba,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1793,7 +1794,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.2
+  m_fontSize: 19.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1832,7 +1833,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &3765110839540759285
@@ -3171,7 +3172,7 @@ MonoBehaviour:
   m_text: T
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f875da48339b67f479512772101d3aba, type: 2}
-  m_sharedMaterial: {fileID: 8352227799432077483, guid: a081233cec5794765952618871ac8b73,
+  m_sharedMaterial: {fileID: 4100901348875126467, guid: f875da48339b67f479512772101d3aba,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3196,7 +3197,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.2
+  m_fontSize: 19.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3235,7 +3236,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &7980382901170141184
@@ -3592,7 +3593,7 @@ MonoBehaviour:
   m_text: G
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f875da48339b67f479512772101d3aba, type: 2}
-  m_sharedMaterial: {fileID: 8352227799432077483, guid: a081233cec5794765952618871ac8b73,
+  m_sharedMaterial: {fileID: 4100901348875126467, guid: f875da48339b67f479512772101d3aba,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3617,7 +3618,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.2
+  m_fontSize: 19.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3656,7 +3657,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &8930363242588453227
