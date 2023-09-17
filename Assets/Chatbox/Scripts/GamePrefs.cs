@@ -28,8 +28,9 @@ public class GamePrefs
    public static void SaveToUnlockedSymbol(char c)
    {
       var list = GetUnlockedSymbols();
-      if(!list.Contains(c))
-         list.Add(c);
+      var lower = char.ToLower(c);
+      if(!list.Contains(lower))
+         list.Add(lower);
       
       PlayerPrefs.SetString(KEY_UNLOCKED_SYMBOLS, string.Join(",", list));
       PlayerPrefs.Save();

@@ -26,6 +26,7 @@ public class TextGuesser : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            AudioManager.Instance.PlaySFX(AudioManager.ClipTypes.Click);
             Close();
             return;
         }

@@ -114,6 +114,7 @@ public class ChatBoxUI : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.J) && !textGuesser.IsOpen && !IsOpen)
         {
+            AudioManager.Instance.PlaySFX(AudioManager.ClipTypes.Click);
             journalGameObject.SetActive(!journalGameObject.activeSelf);
         }
         
@@ -122,6 +123,7 @@ public class ChatBoxUI : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.G) && !textGuesser.IsOpen)
         {
+            AudioManager.Instance.PlaySFX(AudioManager.ClipTypes.Click);
             cg.alpha = 0.95f;
             journalGameObject.SetActive(false);
             textGuesser.Open(currentChatInput, () =>
@@ -132,11 +134,13 @@ public class ChatBoxUI : MonoBehaviour
                 historyLabel.text += $"{currentSpeaker} : {chatTextBox.text}";
                 OnSuccessfulTranslation?.Invoke();
                 textGuesser.Close();
+                AudioManager.Instance.PlaySFX(AudioManager.ClipTypes.Translated);
             });
         }
 
         if (Input.GetKeyDown(KeyCode.T) && !textGuesser.IsOpen)
         {
+            AudioManager.Instance.PlaySFX(AudioManager.ClipTypes.Click);
             languageMode = (LanguageMode)(((int)languageMode + 1) % Enum.GetValues(typeof(LanguageMode)).Length);
             chatTextBox.text = Translate(currentChatInput, languageMode);
         }
@@ -232,6 +236,7 @@ public class ChatBoxUI : MonoBehaviour
                     break;
           
                 DisplayData(chatDialogs[indx]);
+                AudioManager.Instance.PlaySFX(AudioManager.ClipTypes.ChatBoxNext);
             }
 
             yield return null;
