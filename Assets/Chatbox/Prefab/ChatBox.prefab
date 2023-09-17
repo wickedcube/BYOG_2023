@@ -1224,13 +1224,13 @@ MonoBehaviour:
   chatTextBox: {fileID: 6633424477135140066}
   nameTextBox: {fileID: 1977895809023977418}
   textGuesser: {fileID: 3827375402083380517}
-  continueCode: E,Return,Space
-  HiddenSymbol: '?'
+  continueCode: Return,Space
+  HiddenSymbol: '_ '
   availbleSprites:
   - {fileID: 868394996549391050}
   - {fileID: 8372099071310164320}
   - {fileID: 9167102883533172687}
-  basicUnlockedSymbols: 2e002c003b003f002100
+  basicUnlockedSymbols: 2e002c003b003f0021002c002700
   unlockedSymbols: 
 --- !u!1 &2241451253889268433
 GameObject:

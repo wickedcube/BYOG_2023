@@ -62,8 +62,9 @@ public class StateManager : MonoBehaviour
                 MoveCharToNextState(TriggerAnotherCharacterNext[(lastInteractedGuest, CharNameToStateDict[lastInteractedGuest])]);    
             }
 
-            if (_translatedPhase1Guests.Count == Enum.GetNames(typeof(Guest)).Length - 1)
+            if (_translatedPhase1Guests.Count == Enum.GetNames(typeof(Guest)).Length - 2)
             {
+                _translatedPhase1Guests.Clear();
                 MoveCharToNextState(Guest.Naina);
                 MoveCharToNextState(Guest.Priya);
                 MoveCharToNextState(Guest.Ishaan);
