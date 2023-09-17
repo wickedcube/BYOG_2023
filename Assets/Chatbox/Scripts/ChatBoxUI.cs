@@ -52,6 +52,9 @@ public class ChatBoxUI : MonoBehaviour
     [SerializeField] private List<char> unlockedSymbols;
     [SerializeField] private List<string> readFilesNames;
     
+    [SerializeField] private Animator journalAnimation;
+    [SerializeField] private GameObject journalButton;
+    
     private LanguageMode languageMode = LanguageMode.Secret;
     private List<KeyCode> continueKeys;
     private Image activeSprite;
@@ -113,8 +116,12 @@ public class ChatBoxUI : MonoBehaviour
 
     private void Update()
     {
+        if(journalButton.activeSelf != !IsOpen)
+            journalButton.gameObject.SetActive(!IsOpen);
+        
         if (Input.GetKeyDown(KeyCode.J) && !textGuesser.IsOpen && !IsOpen)
         {
+            journalAnimation.SetBool("Anim", false);
             AudioManager.Instance.PlaySFX(AudioManager.ClipTypes.Click);
             journalGameObject.SetActive(!journalGameObject.activeSelf);
         }

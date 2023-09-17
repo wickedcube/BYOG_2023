@@ -726,6 +726,7 @@ GameObject:
   - component: {fileID: 6109996875647106939}
   - component: {fileID: 525121700170010970}
   - component: {fileID: 9093475207833067999}
+  - component: {fileID: 868589694149074686}
   m_Layer: 5
   m_Name: JournalKeys
   m_TagString: Untagged
@@ -788,6 +789,27 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!95 &868589694149074686
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953265358029690121}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8dec215cf152a4b5ba819a478937c9f6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1992302200752197728
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,6 +1256,8 @@ MonoBehaviour:
   basicUnlockedSymbols: 2e002c003b003f0021002c002700
   unlockedSymbols: 
   readFilesNames: []
+  journalAnimation: {fileID: 868589694149074686}
+  journalButton: {fileID: 1953265358029690121}
 --- !u!1 &2241451253889268433
 GameObject:
   m_ObjectHideFlags: 0
