@@ -90,6 +90,7 @@ public class ChatBoxUI : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.Instance.PlayBG(AudioManager.ClipTypes.GamePlayBG_3);
         textGuesser = GetComponentInChildren<TextGuesser>(true);
         textGuesser.OnClosed += () =>
         {
