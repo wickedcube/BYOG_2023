@@ -25,7 +25,7 @@ namespace DefaultNamespace
     }
     public class RoomTransit : MonoBehaviour
     { 
-        public float b = .7f;
+        [NonSerialized] public float b = 1f;
         public static RoomTransit Instance;
 
         public GameObject playerPrefab;
