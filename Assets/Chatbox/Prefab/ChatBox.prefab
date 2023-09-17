@@ -898,7 +898,7 @@ GameObject:
   - component: {fileID: 4838696885939571572}
   - component: {fileID: 3271244458938521371}
   m_Layer: 5
-  m_Name: TranslateOption (2)
+  m_Name: GuessOption
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1258,6 +1258,7 @@ MonoBehaviour:
   readFilesNames: []
   journalAnimation: {fileID: 868589694149074686}
   journalButton: {fileID: 1953265358029690121}
+  translateButton: {fileID: 3765110839540759285}
 --- !u!1 &2241451253889268433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1872,7 +1873,7 @@ GameObject:
   - component: {fileID: 8974904498728288865}
   - component: {fileID: 7771960610603886147}
   m_Layer: 5
-  m_Name: TranslateOption (1)
+  m_Name: TranslateOption
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

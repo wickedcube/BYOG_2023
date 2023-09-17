@@ -30,7 +30,8 @@ public class ChatBoxUI : MonoBehaviour
     }
     
     public bool IsOpen { get; private set; }
-
+    private bool CanTranslate = true;
+    
     private string CHAT_PATH = "ChatData";
     private string CHAR_IMG_PATH = "Characters";
     [FormerlySerializedAs("helpButtons")] [SerializeField] private GameObject chatHelpButtons;
@@ -54,6 +55,7 @@ public class ChatBoxUI : MonoBehaviour
     
     [SerializeField] private Animator journalAnimation;
     [SerializeField] private GameObject journalButton;
+    [SerializeField] private GameObject translateButton;
     
     private LanguageMode languageMode = LanguageMode.Secret;
     private List<KeyCode> continueKeys;
@@ -146,8 +148,8 @@ public class ChatBoxUI : MonoBehaviour
                 AudioManager.Instance.PlaySFX(AudioManager.ClipTypes.Translated);
             });
         }
-
-        if (Input.GetKeyDown(KeyCode.T) && !textGuesser.IsOpen)
+        
+        if (Input.GetKeyDown(KeyCode.T) && !textGuesser.IsOpen && CanTranslate)
         {
             AudioManager.Instance.PlaySFX(AudioManager.ClipTypes.Click);
             languageMode = (LanguageMode)(((int)languageMode + 1) % Enum.GetValues(typeof(LanguageMode)).Length);
@@ -292,10 +294,17 @@ public class ChatBoxUI : MonoBehaviour
     private string Translate(string text, LanguageMode languageMode)
     {
         currentChatInput = text;
+        CanTranslate = true;
+        translateButton.SetActive(true);
         if (languageMode == LanguageMode.Secret)
         {
+            CanTranslate = false;
+            translateButton.SetActive(false);
             if (text.StartsWith("`") && text.EndsWith("`"))
-                return $"<font={discoveredFontAsset.name}>{text.Replace("`","")}</font>";
+            {
+                CanTranslate = true;
+                return $"<font={discoveredFontAsset.name}>{text.Replace("`", "")}</font>";
+            }
         }
    
         string newString = "";
