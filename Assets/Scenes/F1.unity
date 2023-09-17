@@ -1670,6 +1670,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChatBox
       objectReference: {fileID: 0}
+    - target: {fileID: 4572322347860443163, guid: 7ec9b9f158cac44b59f571fae5c0aa83,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572322347860443163, guid: 7ec9b9f158cac44b59f571fae5c0aa83,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572322347860443163, guid: 7ec9b9f158cac44b59f571fae5c0aa83,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572322347860443163, guid: 7ec9b9f158cac44b59f571fae5c0aa83,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4894050179138118760, guid: 7ec9b9f158cac44b59f571fae5c0aa83,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1770,20 +1790,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7632578762136681671, guid: 7ec9b9f158cac44b59f571fae5c0aa83,
+    - target: {fileID: 6109996875647106939, guid: 7ec9b9f158cac44b59f571fae5c0aa83,
         type: 3}
-      propertyPath: basicUnlockedSymbols.Array.size
-      value: 7
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7632578762136681671, guid: 7ec9b9f158cac44b59f571fae5c0aa83,
+    - target: {fileID: 6109996875647106939, guid: 7ec9b9f158cac44b59f571fae5c0aa83,
         type: 3}
-      propertyPath: basicUnlockedSymbols.Array.data[5]
-      value: 44
+      propertyPath: m_AnchorMin.y
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7632578762136681671, guid: 7ec9b9f158cac44b59f571fae5c0aa83,
+    - target: {fileID: 6109996875647106939, guid: 7ec9b9f158cac44b59f571fae5c0aa83,
         type: 3}
-      propertyPath: basicUnlockedSymbols.Array.data[6]
-      value: 39
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224745483722864025, guid: 7ec9b9f158cac44b59f571fae5c0aa83,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224745483722864025, guid: 7ec9b9f158cac44b59f571fae5c0aa83,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224745483722864025, guid: 7ec9b9f158cac44b59f571fae5c0aa83,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224745483722864025, guid: 7ec9b9f158cac44b59f571fae5c0aa83,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
