@@ -1,7 +1,7 @@
 [once]
 
-Anil [kieren/kieren-angry @ left] : I went to the wine cellar. Ran into Arvind
+Anil [anil @ left] : I went to the wine cellar. Ran into Arvind
 
 [repeat]
 
-Anil [kieren/kieren-angry @ left] : I went to the wine cellar. Ran into Arvind
+Anil [anil @ left] : I went to the wine cellar. Ran into Arvind

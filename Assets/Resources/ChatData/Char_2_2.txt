@@ -1,7 +1,7 @@
 [once]
 
-Raghav [kieren/kieren-angry @ left] : I was in the bedroom, I think I saw Ishaan walk by.
+Raghav [raghav @ left] : I was in the bedroom, I think I saw Ishaan walk by.
 
 [repeat]
 
-Raghav [kieren/kieren-angry @ left] : I was in the bedroom, I think I saw Ishaan walk by.
+Raghav [raghav @ left] : I was in the bedroom, I think I saw Ishaan walk by.

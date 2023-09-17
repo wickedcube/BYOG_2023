@@ -1,7 +1,7 @@
 [once]
 
-Priya [kieren/kieren-angry @ left] : I relaxed in the drawing room. Uma was there too
+Priya [priya @ left] : I relaxed in the drawing room. Uma was there too
 
 [repeat]
 
-Priya [kieren/kieren-angry @ left] : I relaxed in the drawing room. Uma was there too
+Priya [priya @ left] : I relaxed in the drawing room. Uma was there too

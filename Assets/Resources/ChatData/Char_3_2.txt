@@ -1,7 +1,7 @@
 [once]
 
-Uma [kieren/kieren-angry @ left] : I chose the drawing room to read a book I've been meaning to finish 
+Uma [uma @ left] : I chose the drawing room to read a book I've been meaning to finish 
 
 [repeat]
 
-Uma [kieren/kieren-angry @ left] : I chose the drawing room to read a book I've been meaning to finish
+Uma [uma @ left] : I chose the drawing room to read a book I've been meaning to finish

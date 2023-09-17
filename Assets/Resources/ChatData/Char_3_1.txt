@@ -1,7 +1,7 @@
 [once]
 
-Uma [kieren/kieren-angry @ left] : A bright student, gone
+Uma [uma @ left] : A bright student, gone
 
 [repeat]
 
-Uma [kieren/kieren-angry @ left] : A bright student, gone
+Uma [uma @ left] : A bright student, gone
