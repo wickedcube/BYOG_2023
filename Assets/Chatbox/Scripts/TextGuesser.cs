@@ -50,7 +50,7 @@ public class TextGuesser : MonoBehaviour
         this.onSubmit = onSubmit;
         IsOpen = true;
         this.gameObject.SetActive(true);
-        inputField.Select();
+        inputField.ActivateInputField();
     }
 
     public void Close()
@@ -82,8 +82,8 @@ public class TextGuesser : MonoBehaviour
 
     IEnumerator SelectAfter()
     {
-        yield return new WaitForSeconds(0.2f);
-        inputField.Select();
+        yield return new WaitForSeconds(0.5f);
+        inputField.ActivateInputField();
     }
     private string Validate(string input)
     {
