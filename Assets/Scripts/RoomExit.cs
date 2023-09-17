@@ -43,10 +43,11 @@ namespace DefaultNamespace
 
             if (timeInCollider >= RoomTransit.Instance.b )
             {
-                if ((Time.time - lastInputChangedTimestamp > 1f))
-                {
-                    RoomTransit.Instance.TransportPlayerToRoom(exitRoomType);
-                }
+                RoomTransit.Instance.TransportPlayerToRoom(exitRoomType);
+                // if ((Time.time - lastInputChangedTimestamp > 1f))
+                // {
+                //     
+                // }
             }
         }
 

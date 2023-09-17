@@ -7,7 +7,7 @@ namespace DefaultNamespace
     {
         public Action PlayerChangedInput;
         
-        public float speed = 5;
+        public float speed = 12;
         public float gravity = -5;
 
         float velocityY = 0;

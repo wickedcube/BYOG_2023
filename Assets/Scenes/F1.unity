@@ -1936,6 +1936,7 @@ MonoBehaviour:
   - {fileID: 1489507741}
   - {fileID: 55698655}
   - {fileID: 385132268}
+  solver: {fileID: 0}
 --- !u!4 &449481150
 Transform:
   m_ObjectHideFlags: 0
@@ -3065,7 +3066,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &696203735
 Transform:
   m_ObjectHideFlags: 0
@@ -52658,7 +52659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &6666753130018193816
 GameObject:
   m_ObjectHideFlags: 0
