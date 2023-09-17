@@ -1259,6 +1259,7 @@ MonoBehaviour:
   journalAnimation: {fileID: 868589694149074686}
   journalButton: {fileID: 1953265358029690121}
   translateButton: {fileID: 3765110839540759285}
+  guessButton: {fileID: 2018366381141026456}
 --- !u!1 &2241451253889268433
 GameObject:
   m_ObjectHideFlags: 0
