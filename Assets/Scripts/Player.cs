@@ -74,6 +74,7 @@ namespace DefaultNamespace
             controller.enabled = false;
             transform.position = position;
             controller.enabled = true;
+            AudioManager.Instance.PlaySFX(AudioManager.ClipTypes.DoorOpen);
         }
     }
 }
