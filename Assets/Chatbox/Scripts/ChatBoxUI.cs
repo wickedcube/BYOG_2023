@@ -275,6 +275,11 @@ public class ChatBoxUI : MonoBehaviour
         chatTextBox.text = Translate(data.Text, languageMode);
         chatTextBox.ForceMeshUpdate(false,true);
         LoadCharacterImage(data.Img, data.ImgPos);
+        
+        if (languageMode == LanguageMode.English)
+        {
+            chatOgOnTranslateBox.text = Translate(currentChatInput, LanguageMode.Secret);
+        }
     }
 
     private string Translate(string text, LanguageMode languageMode)
