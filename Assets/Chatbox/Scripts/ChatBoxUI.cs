@@ -89,6 +89,10 @@ public class ChatBoxUI : MonoBehaviour
     private void Start()
     {
         textGuesser = GetComponentInChildren<TextGuesser>(true);
+        textGuesser.OnClosed += () =>
+        {
+            cg.alpha = 1f;
+        };
         unlockedSymbols = GamePrefs.GetUnlockedSymbols();
         if (unlockedSymbols.Count <= 0)
         {
@@ -116,27 +120,19 @@ public class ChatBoxUI : MonoBehaviour
         if (!IsOpen)
             return;
         
-        if (Input.GetKeyDown(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.G) && !textGuesser.IsOpen)
         {
-            if (textGuesser.IsOpen)
+            cg.alpha = 0.95f;
+            journalGameObject.SetActive(false);
+            textGuesser.Open(currentChatInput, () =>
             {
-                cg.alpha = 1f;
+                SaveStringChars(currentChatInput);
+                languageMode = LanguageMode.English;
+                chatTextBox.text = Translate(currentChatInput, languageMode);
+                historyLabel.text += $"{currentSpeaker} : {chatTextBox.text}";
+                OnSuccessfulTranslation?.Invoke();
                 textGuesser.Close();
-            }
-            else
-            {
-                cg.alpha = 0.95f;
-                journalGameObject.SetActive(false);
-                textGuesser.Open(currentChatInput, () =>
-                {
-                    SaveStringChars(currentChatInput);
-                    languageMode = LanguageMode.English;
-                    chatTextBox.text = Translate(currentChatInput, languageMode);
-                    historyLabel.text += $"{currentSpeaker} : {chatTextBox.text}";
-                    OnSuccessfulTranslation?.Invoke();
-                    textGuesser.Close();
-                });
-            }
+            });
         }
 
         if (Input.GetKeyDown(KeyCode.T) && !textGuesser.IsOpen)
@@ -164,7 +160,7 @@ public class ChatBoxUI : MonoBehaviour
         chatHelpButtons.gameObject.SetActive(true);
         if(chatRoutine != null)
             StopCoroutine(chatRoutine);
-   
+        
         var textAsset = Resources.Load<TextAsset>($"{CHAT_PATH}/{chatMapFileName}");
         if (textAsset == null)
             return;

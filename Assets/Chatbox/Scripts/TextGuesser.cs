@@ -11,6 +11,8 @@ public class TextGuesser : MonoBehaviour
     private Action onSubmit;
     private string checkString;
     private Animator animator;
+
+    public Action OnClosed;
     
     public bool IsOpen { get; private set; }
 
@@ -22,6 +24,12 @@ public class TextGuesser : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Close();
+            return;
+        }
+        
         if (string.IsNullOrEmpty(inputField.text) || string.IsNullOrWhiteSpace(inputField.text))
         {
             if(acceptBttn.activeSelf)
@@ -36,6 +44,7 @@ public class TextGuesser : MonoBehaviour
 
     public void Open(string checkString, Action onSubmit)
     {
+        inputField.text = "";
         this.checkString = checkString;
         this.onSubmit = onSubmit;
         IsOpen = true;
@@ -45,10 +54,12 @@ public class TextGuesser : MonoBehaviour
 
     public void Close()
     {
+        inputField.text = "";
         onSubmit = null;
         checkString = GIBBERISH;
         IsOpen = false;
         this.gameObject.SetActive(false);
+        OnClosed?.Invoke();
     }
     
     private void Match()
