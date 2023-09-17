@@ -1,7 +1,7 @@
 [once]
 
-Naina [kieren/kieren-angry @ left] : I chatted with a few guests in the dining room. Later, I saw Anil talking to Arvind near the cellar 
+Naina [kieren/kieren-angry @ left] : I chatted with a few guests in the dining. Later, I saw Anil talking to Arvind in the cellar 
 
 [repeat]
 
-Naina [kieren/kieren-angry @ left] : I chatted with a few guests in the dining room. Later, I saw Anil talking to Arvind near the cellar
+Naina [kieren/kieren-angry @ left] : I chatted with a few guests in the dining. Later, I saw Anil talking to Arvind in the cellar
