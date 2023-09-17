@@ -26,7 +26,7 @@ namespace DefaultNamespace
     public class RoomBehaviour : MonoBehaviour
     {
         public const float minTimeToMove = 0.3f;
-        public const float maxTimeToMove = 0.8f;
+        public const float maxTimeToMove = 0.4f;
         
         private RoomTransit _roomTransit;
         public List<SpawnPointData> spawnPointData;
