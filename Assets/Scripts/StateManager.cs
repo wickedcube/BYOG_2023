@@ -20,7 +20,7 @@ public class StateManager : MonoBehaviour
         { Guest.Arvind, 1 },
         { Guest.Priya, 1 },
         { Guest.Raghav, 1 },
-        { Guest.Uma, 2 },
+        { Guest.Uma, 1 },
         { Guest.Naina, 1 },
         { Guest.Anil, 1 },
         { Guest.Ishaan, 1 },
@@ -79,6 +79,7 @@ public class StateManager : MonoBehaviour
 
             if (_translatedPhase2Guests.Count == Enum.GetNames(typeof(Guest)).Length - 2)
             {
+                _lastInteractedGuestN = null;
                 phase2Guests.gameObject.SetActive(false);
                 solver.gameObject.SetActive(true);
             }
@@ -87,6 +88,7 @@ public class StateManager : MonoBehaviour
 
     private void MoveToPhase2()
     {
+        _lastInteractedGuestN = null;
         phase1Guests.gameObject.SetActive(false);
                 
         MoveCharToNextState(Guest.Priya);
@@ -120,7 +122,7 @@ public class StateManager : MonoBehaviour
         _lastInteractedGuestN = parsedGuest;
     }
     
-    public void ResetCurrentInteractingChar(string gameObjectName)
+    public void ResetCurrentInteractingChar()
     {
         _lastInteractedGuestN = null;
     }

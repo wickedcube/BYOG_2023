@@ -1,15 +1,7 @@
 [once]
 
-Naina [kieren/kieren-angry @ left] : I spent most of my time in the dining room, chatting with a few guests 
-Naina [kieren/kieren-angry @ left] : I did step into the drawing room briefly and saw Uma
-Naina [kieren/kieren-angry @ left] : But what's crucial is that 
-Naina [kieren/kieren-angry @ left] : as I was passing near the wine cellar
-Naina [kieren/kieren-angry @ left] : I saw Anil deep in conversation with Arvind
+Naina [kieren/kieren-angry @ left] : I chatted with a few guests in the dining room. Later, I saw Anil talking to Arvind near the cellar 
 
 [repeat]
 
-Naina [kieren/kieren-angry @ left] : I spent most of my time in the dining room, chatting with a few guests 
-Naina [kieren/kieren-angry @ left] : I did step into the drawing room briefly and saw Uma
-Naina [kieren/kieren-angry @ left] : But what's crucial is that 
-Naina [kieren/kieren-angry @ left] : as I was passing near the wine cellar
-Naina [kieren/kieren-angry @ left] : I saw Anil deep in conversation with Arvind
+Naina [kieren/kieren-angry @ left] : I chatted with a few guests in the dining room. Later, I saw Anil talking to Arvind near the cellar

@@ -1,16 +1,8 @@
 [once]
 
-Ishaan [kieren/kieren-angry @ left] : I was moving between the dining room and the drawing room
-Ishaan [kieren/kieren-angry @ left] : discussing a potential play with some guests
-Ishaan [kieren/kieren-angry @ left] : On one of my trips
-Ishaan [kieren/kieren-angry @ left] : I saw Raghav in the bedroom 
-Ishaan [kieren/kieren-angry @ left] : engrossed in a phone call.
+Ishaan [kieren/kieren-angry @ left] : I moved around a lot, I remember seeing Raghav in the bedroom
 
 
 [repeat]
 
-Ishaan [kieren/kieren-angry @ left] : I was moving between the dining room and the drawing room
-Ishaan [kieren/kieren-angry @ left] : discussing a potential play with some guests
-Ishaan [kieren/kieren-angry @ left] : On one of my trips
-Ishaan [kieren/kieren-angry @ left] : I saw Raghav in the bedroom 
-Ishaan [kieren/kieren-angry @ left] : engrossed in a phone call.
+Ishaan [kieren/kieren-angry @ left] : I moved around a lot, I remember seeing Raghav in the bedroom

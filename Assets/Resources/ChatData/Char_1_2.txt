@@ -1,11 +1,7 @@
 [once]
 
-Priya [kieren/kieren-angry @ left] : After we finished dinner
-Priya [kieren/kieren-angry @ left] : I decided to head to the drawing room for some quiet time
-Priya [kieren/kieren-angry @ left] : I remember seeing Uma there, engrossed in a book
+Priya [kieren/kieren-angry @ left] : I relaxed in the drawing room. Uma was there too
 
 [repeat]
 
-Priya [kieren/kieren-angry @ left] : After we finished dinner
-Priya [kieren/kieren-angry @ left] : I decided to head to the drawing room for some quiet time
-Priya [kieren/kieren-angry @ left] : I remember seeing Uma there, engrossed in a book
+Priya [kieren/kieren-angry @ left] : I relaxed in the drawing room. Uma was there too

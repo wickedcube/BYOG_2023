@@ -1,13 +1,7 @@
 [once]
 
 Uma [kieren/kieren-angry @ left] : I chose the drawing room to read a book I've been meaning to finish 
-Uma [kieren/kieren-angry @ left] : Priya came in for a while 
-Uma [kieren/kieren-angry @ left] : and later
-Uma [kieren/kieren-angry @ left] : Naina also stepped in
 
 [repeat]
 
-Uma [kieren/kieren-angry @ left] : I chose the drawing room to read a book I've been meaning to finish 
-Uma [kieren/kieren-angry @ left] : Priya came in for a while 
-Uma [kieren/kieren-angry @ left] : and later
-Uma [kieren/kieren-angry @ left] : Naina also stepped in
+Uma [kieren/kieren-angry @ left] : I chose the drawing room to read a book I've been meaning to finish
