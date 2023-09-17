@@ -42,6 +42,7 @@ public class ChatBoxUI : MonoBehaviour
     [SerializeField] private TMP_FontAsset secretFontAsset;
     [SerializeField] private TMP_FontAsset discoveredFontAsset;
     [SerializeField] private TMP_Text chatTextBox;
+    [SerializeField] private TMP_Text chatOgOnTranslateBox;
     [SerializeField] private TMP_Text nameTextBox;
     [SerializeField] private TextGuesser textGuesser;
     [SerializeField] private string continueCode;
@@ -131,7 +132,8 @@ public class ChatBoxUI : MonoBehaviour
                 SaveStringChars(currentChatInput);
                 languageMode = LanguageMode.English;
                 chatTextBox.text = Translate(currentChatInput, languageMode);
-                historyLabel.text += $"{currentSpeaker} : {chatTextBox.text}";
+                historyLabel.text += $"{currentSpeaker} : {chatTextBox.text}\n";
+                historyLabel.text += $"{currentSpeaker} : {Translate(currentChatInput, LanguageMode.Secret)}\n\n";
                 OnSuccessfulTranslation?.Invoke();
                 textGuesser.Close();
                 AudioManager.Instance.PlaySFX(AudioManager.ClipTypes.Translated);
@@ -143,6 +145,11 @@ public class ChatBoxUI : MonoBehaviour
             AudioManager.Instance.PlaySFX(AudioManager.ClipTypes.Click);
             languageMode = (LanguageMode)(((int)languageMode + 1) % Enum.GetValues(typeof(LanguageMode)).Length);
             chatTextBox.text = Translate(currentChatInput, languageMode);
+            chatOgOnTranslateBox.gameObject.SetActive(languageMode == LanguageMode.English);
+            if (languageMode == LanguageMode.English)
+            {
+                chatOgOnTranslateBox.text = Translate(currentChatInput, LanguageMode.Secret);
+            }
         }
         
     }
