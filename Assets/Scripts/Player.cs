@@ -27,7 +27,7 @@ namespace DefaultNamespace
         private Vector3 lastInput = Vector3.zero;
         private void Update()
         {
-            if(ChatBoxUI.Instance.IsOpen)
+            if(ChatBoxUI.Instance != null && ChatBoxUI.Instance.IsOpen)
                 return;
             
             if (!isMoving)
