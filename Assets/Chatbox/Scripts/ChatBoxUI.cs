@@ -50,6 +50,7 @@ public class ChatBoxUI : MonoBehaviour
     [SerializeField] private List<Image> availbleSprites;
     [SerializeField] private List<char> basicUnlockedSymbols;
     [SerializeField] private List<char> unlockedSymbols;
+    [SerializeField] private List<string> readFilesNames;
     
     private LanguageMode languageMode = LanguageMode.Secret;
     private List<KeyCode> continueKeys;
@@ -69,17 +70,17 @@ public class ChatBoxUI : MonoBehaviour
         StartChatting("test_chat");
     }
 
-    [NaughtyAttributes.Button("Clear Chat History")]
-    private void ClearChatHistory()
-    {
-        GamePrefs.ClearChatHistory();
-    }
-
-    [NaughtyAttributes.Button("Clear Unlocked Symbols")]
-    private void ClearUnlockedSymbols()
-    {
-        GamePrefs.ClearUnlockedSymbols();
-    }
+    // [NaughtyAttributes.Button("Clear Chat History")]
+    // private void ClearChatHistory()
+    // {
+    //     GamePrefs.ClearChatHistory();
+    // }
+    //
+    // [NaughtyAttributes.Button("Clear Unlocked Symbols")]
+    // private void ClearUnlockedSymbols()
+    // {
+    //     GamePrefs.ClearUnlockedSymbols();
+    // }
 
     [NaughtyAttributes.Button("Re")]
     private void ReTranslate()
@@ -94,14 +95,10 @@ public class ChatBoxUI : MonoBehaviour
         {
             cg.alpha = 1f;
         };
-        unlockedSymbols = GamePrefs.GetUnlockedSymbols();
+        // unlockedSymbols = GamePrefs.GetUnlockedSymbols();
         if (unlockedSymbols.Count <= 0)
         {
             unlockedSymbols.AddRange(basicUnlockedSymbols);
-            foreach (var symb in basicUnlockedSymbols)
-            {
-                GamePrefs.SaveToUnlockedSymbol(symb);
-            }
         }
 
         continueKeys = new List<KeyCode>();
@@ -159,10 +156,9 @@ public class ChatBoxUI : MonoBehaviour
         List<char> unique = text.Distinct().ToList();
         foreach (var ch in unique)
         {
-            GamePrefs.SaveToUnlockedSymbol(ch);
+            var cLower = char.ToLower(ch);
+            unlockedSymbols.Add(cLower);
         }
-        
-        unlockedSymbols = GamePrefs.GetUnlockedSymbols();
     }
     
     public void StartChatting(string chatMapFileName)
@@ -179,10 +175,10 @@ public class ChatBoxUI : MonoBehaviour
         if (chatData == null)
             return;
 
-        if (GamePrefs.IsNewChat(chatMapFileName))
+        if (!readFilesNames.Contains(chatMapFileName))
         {
             Debug.Log("Loading New Chat");
-            InitialiseChat(chatData.OnceDialogs, () => GamePrefs.AddToChatHistory(chatMapFileName));
+            InitialiseChat(chatData.OnceDialogs, () => readFilesNames.Add(chatMapFileName));
         }
         else
         { 
@@ -331,6 +327,18 @@ public class ChatBoxUI : MonoBehaviour
         }
         return newString;
    
+    }
+
+    public void UnlockAtStart(string s)
+    {
+        foreach (var c in s)
+        {
+            var cLower = char.ToLower(c);
+            if (!unlockedSymbols.Contains(cLower))
+            {
+                unlockedSymbols.Add(cLower);
+            }
+        }
     }
 
     private void LoadCharacterImage(string charImg, ChatDialog.Position position)

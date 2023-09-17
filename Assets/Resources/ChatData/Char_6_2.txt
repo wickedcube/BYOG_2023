@@ -1,7 +1,16 @@
 [once]
 
-Ishaan [kieren/kieren-angry @ left] : This is my first time meeting everyone. I just know Priya from a jazz club.
+Ishaan [kieren/kieren-angry @ left] : I was moving between the dining room and the drawing room
+Ishaan [kieren/kieren-angry @ left] : discussing a potential play with some guests
+Ishaan [kieren/kieren-angry @ left] : On one of my trips
+Ishaan [kieren/kieren-angry @ left] : I saw Raghav in the bedroom 
+Ishaan [kieren/kieren-angry @ left] : engrossed in a phone call.
+
 
 [repeat]
 
-Ishaan [kieren/kieren-angry @ left] : This is my first time meeting everyone. I just know Priya from a jazz club.
+Ishaan [kieren/kieren-angry @ left] : I was moving between the dining room and the drawing room
+Ishaan [kieren/kieren-angry @ left] : discussing a potential play with some guests
+Ishaan [kieren/kieren-angry @ left] : On one of my trips
+Ishaan [kieren/kieren-angry @ left] : I saw Raghav in the bedroom 
+Ishaan [kieren/kieren-angry @ left] : engrossed in a phone call.

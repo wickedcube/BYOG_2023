@@ -47,7 +47,7 @@ namespace DefaultNamespace
         public RoomBehaviour Activate()
         {
             gameObject.SetActive(true);
-            StartBakchodi();
+            // StartBakchodi();
             return this;
         }
 

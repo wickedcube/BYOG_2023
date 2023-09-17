@@ -1,9 +1,11 @@
 [once]
 
-Priya [kieren/kieren-angry @ left] : Uma has always been wary of Arvind. 
-Priya [kieren/kieren-angry @ left] : He often challenged her zoology research, which vexed her.
+Priya [kieren/kieren-angry @ left] : After we finished dinner
+Priya [kieren/kieren-angry @ left] : I decided to head to the drawing room for some quiet time
+Priya [kieren/kieren-angry @ left] : I remember seeing Uma there, engrossed in a book
 
 [repeat]
 
-Priya [kieren/kieren-angry @ left] : Uma has always been wary of Arvind. 
-Priya [kieren/kieren-angry @ left] : He often challenged her zoology research, which vexed her.
+Priya [kieren/kieren-angry @ left] : After we finished dinner
+Priya [kieren/kieren-angry @ left] : I decided to head to the drawing room for some quiet time
+Priya [kieren/kieren-angry @ left] : I remember seeing Uma there, engrossed in a book

@@ -25,27 +25,31 @@ public class StateManager : MonoBehaviour
         { Guest.Anil, 1 },
         { Guest.Ishaan, 1 },
     };
-
-    Dictionary<(Guest, int), Guest> TriggerAnotherCharacterNext = new ()
-    {
-        { (Guest.Naina, 2), Guest.Raghav },
-        { (Guest.Priya, 2), Guest.Uma },
-        { (Guest.Uma, 2), Guest.Anil },
-    };
     
     private Guest? _lastInteractedGuestN;
     private HashSet<Guest> _translatedPhase1Guests = new();
     private HashSet<Guest> _translatedPhase2Guests = new();
-    public  List<Transform> phase1PosList;
-    private List<Vector3> _phase2Pos;
-    private List<Vector3> _phase3Pos;
+    public  List<Transform> phase1Guests;
+    public List<Transform> phase2Guests;
+    public List<Transform> phase3Guests;
+    public Transform solver;
 
     public static StateManager Instance;
 
     private void Start()
     {
-        PlayerPrefs.DeleteAll();
         Instance = this;
+        ChatBoxUI.Instance.OnChatBoxClosed += () =>
+        {
+            var lastInteractedGuest = _lastInteractedGuestN ?? Guest.Arvind;
+            if (lastInteractedGuest == Guest.Arvind && 
+                CharNameToStateDict[lastInteractedGuest] == 1 &&
+                !_translatedPhase1Guests.Contains(Guest.Arvind))
+            {
+                ChatBoxUI.Instance.UnlockAtStart("defrost");
+            }
+        };
+
         ChatBoxUI.Instance.OnSuccessfulTranslation += () =>
         {
             var lastInteractedGuest = _lastInteractedGuestN ?? Guest.Arvind;
@@ -58,27 +62,7 @@ public class StateManager : MonoBehaviour
                 _translatedPhase2Guests.Add(lastInteractedGuest);
             }
 
-            if (TriggerAnotherCharacterNext.ContainsKey((lastInteractedGuest, CharNameToStateDict[lastInteractedGuest])))
-            {
-                MoveCharToNextState(TriggerAnotherCharacterNext[(lastInteractedGuest, CharNameToStateDict[lastInteractedGuest])]);    
-            }
-
-            if (lastInteractedGuest == Guest.Arvind && 
-                CharNameToStateDict[lastInteractedGuest] == 1 &&
-                !_translatedPhase1Guests.Contains(Guest.Arvind))
-            {
-                GamePrefs.SaveToUnlockedSymbol("AMS");    
-            }
-
             if (_translatedPhase1Guests.Count == Enum.GetNames(typeof(Guest)).Length - 2)
-            {
-                _translatedPhase1Guests.Clear();
-                MoveCharToNextState(Guest.Naina);
-                MoveCharToNextState(Guest.Priya);
-                MoveCharToNextState(Guest.Ishaan);
-            }
-
-            if (_translatedPhase2Guests.Count == Enum.GetNames(typeof(Guest)).Length - 1)
             {
                 MoveCharToNextState(Guest.Priya);
                 MoveCharToNextState(Guest.Raghav);
@@ -86,6 +70,11 @@ public class StateManager : MonoBehaviour
                 MoveCharToNextState(Guest.Naina);
                 MoveCharToNextState(Guest.Anil);
                 MoveCharToNextState(Guest.Ishaan);
+            }
+
+            if (_translatedPhase2Guests.Count == Enum.GetNames(typeof(Guest)).Length - 2)
+            {
+                solver.gameObject.SetActive(true);
             }
         };
     }

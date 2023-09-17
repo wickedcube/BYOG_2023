@@ -1,9 +1,8 @@
 [once]
 
 Detective [kieren/kieren-angry @ left] : `Looks like a journal, would help with the case`
-Detective [kieren/kieren-angry @ left] : `Log no : 1589`
 Detective [kieren/kieren-angry @ left] : `Blah blah blah`
-Detective [kieren/kieren-angry @ left] : `A`  A  `M`  M  `S`  S
+Detective [kieren/kieren-angry @ left] : `D` D `R` R `E` E `A` A `M` M
 
 
 [repeat]

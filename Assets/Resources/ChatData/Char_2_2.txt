@@ -1,9 +1,13 @@
 [once]
 
-Raghav [kieren/kieren-angry @ left] : Our business is fiercely competitive. 
-Raghav [kieren/kieren-angry @ left] : Disagreements, especially about finances, are common. But that doesn't mean I'd resort to murder.
+Raghav [kieren/kieren-angry @ left] : I was in the bedroom  
+Raghav [kieren/kieren-angry @ left] : I had to make an important phone call
+Raghav [kieren/kieren-angry @ left] : As I was wrapping up
+Raghav [kieren/kieren-angry @ left] : I spotted Ishaan passing by the door
 
 [repeat]
 
-Raghav [kieren/kieren-angry @ left] : Our business is fiercely competitive. 
-Raghav [kieren/kieren-angry @ left] : Disagreements, especially about finances, are common. But that doesn't mean I'd resort to murder.
+Raghav [kieren/kieren-angry @ left] : I was in the bedroom  
+Raghav [kieren/kieren-angry @ left] : I had to make an important phone call
+Raghav [kieren/kieren-angry @ left] : As I was wrapping up
+Raghav [kieren/kieren-angry @ left] : I spotted Ishaan passing by the door

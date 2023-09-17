@@ -1,7 +1,7 @@
 [once]
 
-Detective [kieren/kieren-angry @ left] : `Their grief is palpable, yet one of them might be hiding a sinister secret.`
+Detective [kieren/kieren-angry @ left] : Their grief is palpable, yet one of them might be hiding a sinister secret
 
 [repeat]
 
-Detective [kieren/kieren-angry @ left] : `Their grief is palpable, yet one of them might be hiding a sinister secret.`
+Detective [kieren/kieren-angry @ left] : Their grief is palpable, yet one of them might be hiding a sinister secret

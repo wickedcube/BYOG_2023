@@ -1,9 +1,13 @@
 [once]
 
-Anil [kieren/kieren-angry @ left] : Arvind had commissioned a unique art piece from me for Naina. 
-Anil [kieren/kieren-angry @ left] : However, he abruptly canceled it.
+Anil [kieren/kieren-angry @ left] : After dinner, I went down to the wine cellar
+Anil [kieren/kieren-angry @ left] : I find the ambiance there calming
+Anil [kieren/kieren-angry @ left] : I did run into Arvind earlier in the evening
+Anil [kieren/kieren-angry @ left] : and we had a brief chat
 
 [repeat]
 
-Anil [kieren/kieren-angry @ left] : Arvind had commissioned a unique art piece from me for Naina. 
-Anil [kieren/kieren-angry @ left] : However, he abruptly canceled it.
+Anil [kieren/kieren-angry @ left] : After dinner, I went down to the wine cellar
+Anil [kieren/kieren-angry @ left] : I find the ambiance there calming
+Anil [kieren/kieren-angry @ left] : I did run into Arvind earlier in the evening
+Anil [kieren/kieren-angry @ left] : and we had a brief chat
