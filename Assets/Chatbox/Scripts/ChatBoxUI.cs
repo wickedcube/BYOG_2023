@@ -62,6 +62,8 @@ public class ChatBoxUI : MonoBehaviour
 
     public Action OnSuccessfulTranslation;
     public Action OnChatBoxClosed;
+
+    public int UnlockedSymbolsCount => unlockedSymbols.Count;
     
     
     [NaughtyAttributes.Button("Test")]
@@ -158,7 +160,8 @@ public class ChatBoxUI : MonoBehaviour
         foreach (var ch in unique)
         {
             var cLower = char.ToLower(ch);
-            unlockedSymbols.Add(cLower);
+            if(!unlockedSymbols.Contains(cLower))
+                unlockedSymbols.Add(cLower);
         }
     }
     
@@ -361,4 +364,8 @@ public class ChatBoxUI : MonoBehaviour
         rtf.sizeDelta = sizeDelta;
     }
 
+    public void AddToJournal(string journalString)
+    {
+        historyLabel.text += journalString;
+    }
 }

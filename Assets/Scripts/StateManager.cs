@@ -20,7 +20,7 @@ public class StateManager : MonoBehaviour
         { Guest.Arvind, 1 },
         { Guest.Priya, 1 },
         { Guest.Raghav, 1 },
-        { Guest.Uma, 1 },
+        { Guest.Uma, 2 },
         { Guest.Naina, 1 },
         { Guest.Anil, 1 },
         { Guest.Ishaan, 1 },
@@ -34,10 +34,15 @@ public class StateManager : MonoBehaviour
     public Transform solver;
 
     public static StateManager Instance;
+    public Transform book;
 
     private void Start()
     {
         Instance = this;
+
+        string introString = "Arvind Kapoor (Found dead in the study): Self-made entrepreneur in tech and arts. Known for generosity and charisma but not without controversies. Quote: \"Life is a game of chess, and I play for the endgame.\"\n\nNaina Sahni: Travel blogger, childhood friend of Arvind. Families connected through business. Vivacious and lively.\n\nPriya Desai: Author, college friend of Arvind. Calm and elegant. Rumored past romance with Arvind.\n\nAnil Bhatia: Artist, art school roommate of Arvind. Dreamer with a sketchbook.\n\nRaghav Mehta: Venture capitalist, recent business disagreement with Arvind. Old school friend from cricket days. Sharp-witted.\n\nDr. Uma Krishnan: College professor, taught Arvind and Priya. Stern but fair.\n\nIshaan Verma: Theater director, collaborated with Arvind. Mix of respect and rivalry.";
+        ChatBoxUI.Instance.AddToJournal(introString);
+        
         ChatBoxUI.Instance.OnChatBoxClosed += () =>
         {
             var lastInteractedGuest = _lastInteractedGuestN ?? Guest.Arvind;
@@ -45,7 +50,8 @@ public class StateManager : MonoBehaviour
                 CharNameToStateDict[lastInteractedGuest] == 1 &&
                 !_translatedPhase1Guests.Contains(Guest.Arvind))
             {
-                ChatBoxUI.Instance.UnlockAtStart("defrost");
+                ChatBoxUI.Instance.UnlockAtStart("dream");
+                book.gameObject.SetActive(false);
             }
         };
 
@@ -61,18 +67,14 @@ public class StateManager : MonoBehaviour
                 _translatedPhase2Guests.Add(lastInteractedGuest);
             }
 
-            if (_translatedPhase1Guests.Count == Enum.GetNames(typeof(Guest)).Length - 2)
+            if (CharNameToStateDict[lastInteractedGuest] == 1 && _translatedPhase1Guests.Count == Enum.GetNames(typeof(Guest)).Length - 2)
             {
-                phase1Guests.gameObject.SetActive(false);
-                
-                MoveCharToNextState(Guest.Priya);
-                MoveCharToNextState(Guest.Raghav);
-                MoveCharToNextState(Guest.Uma);
-                MoveCharToNextState(Guest.Naina);
-                MoveCharToNextState(Guest.Anil);
-                MoveCharToNextState(Guest.Ishaan);
-                
-                phase2Guests.gameObject.SetActive(true);
+                MoveToPhase2();   
+            }
+            
+            if (CharNameToStateDict[lastInteractedGuest] == 1 && CharNameToStateDict[lastInteractedGuest] == 1 && ChatBoxUI.Instance.UnlockedSymbolsCount == 28)
+            {
+                MoveToPhase2();
             }
 
             if (_translatedPhase2Guests.Count == Enum.GetNames(typeof(Guest)).Length - 2)
@@ -81,6 +83,20 @@ public class StateManager : MonoBehaviour
                 solver.gameObject.SetActive(true);
             }
         };
+    }
+
+    private void MoveToPhase2()
+    {
+        phase1Guests.gameObject.SetActive(false);
+                
+        MoveCharToNextState(Guest.Priya);
+        MoveCharToNextState(Guest.Raghav);
+        MoveCharToNextState(Guest.Uma);
+        MoveCharToNextState(Guest.Naina);
+        MoveCharToNextState(Guest.Anil);
+        MoveCharToNextState(Guest.Ishaan);
+                
+        phase2Guests.gameObject.SetActive(true);
     }
 
     private void Update()
